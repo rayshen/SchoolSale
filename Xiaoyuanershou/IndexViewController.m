@@ -17,8 +17,9 @@ static const CGFloat MJDuration = 2.0;
  */
 #define MJRandomData [NSString stringWithFormat:@"随机数据---%d", arc4random_uniform(1000000)]
 
-@interface IndexViewController()
-/** 用来显示的假数据 */
+@interface IndexViewController(){
+    
+}
 @property (strong, nonatomic) NSMutableArray *data;
 
 @end
@@ -514,8 +515,6 @@ static const CGFloat MJDuration = 2.0;
         cell = [array objectAtIndex:0];
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
-   
-    
     if (indexPath.section==1) {
         cell.photo1.image=nil;
         cell.photo2.image=nil;
@@ -535,7 +534,6 @@ static const CGFloat MJDuration = 2.0;
         
         [cell.msbutton setTitle:@"22" forState:UIControlStateNormal];
         [cell.likebutton setTitle:@"11" forState:UIControlStateNormal];
-
     }
     return cell;
 }
